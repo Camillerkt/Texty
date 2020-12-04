@@ -11,3 +11,4 @@ Il peut donc y avoir certains bugs.
   - Possibilité de rechercher un fichier dans le gestionnaire
   
 Remarque : Ce projet est ouvert au grand public donc tous les fichiers ou dossiers que vous créerez seront accessibles par absolument tous les utilisateurs.
+https://texty-3c9ff.web.app/
