@@ -1,0 +1,42 @@
+*{
+    user-select: none;
+}
+.header{
+    display:flex;
+}
+.header .return-button, .delete-button, .rename-button{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border:none;
+    background-color: inherit;
+    outline:none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.header .delete-button{
+    color: red;
+}
+.header .rename-button{
+    color: rgb(80, 148, 119);
+}
+.filesAndFolders{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filesAndFolders a{
+    text-decoration:none;
+}
+.filesAndFolders .oneFolder{
+    margin-right: 20px;
+}
+.filesAndFolders .oneFile{
+    margin-right: 20px;
+}
+.dont-show{
+    display:none;
+}
+@media screen and (max-width:800px){
+    .filesAndFolders .oneFile, .oneFolder{
+        margin-top: 10px;
+    }
+}

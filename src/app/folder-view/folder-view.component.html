@@ -1,0 +1,33 @@
+<div class="header">
+    <a [routerLink]="getPreviousUrl()">
+        <button class="return-button">
+            <i class="fas fa-undo-alt"></i> Retour
+        </button>
+    </a>
+
+    <a [routerLink]="'/rename-folder/'+id_parent">
+        <button class="rename-button">
+            <i class="fas fa-i-cursor"></i> Renommer
+        </button>
+    </a>
+
+    <a (click)="deleteFolder()">
+        <button class="delete-button">
+            <i class="fas fa-trash-alt"></i> Supprimer
+        </button>
+    </a>
+</div>
+<div class="filesAndFolders">
+    <div *ngFor="let folder of foldersService.folders" class="oneFolder" [ngClass]="{'show':folder.id_parent === id_parent && folder.masquer === false, 'dont-show': folder.id_parent != id_parent || folder.masquer === true}">
+        <a [routerLink]="'/folder/'+foldersService.folders.indexOf(folder)">
+            <app-one-folder [nom]="folder.nom">
+            </app-one-folder>
+        </a>
+    </div>
+    <div *ngFor="let file of filesService.files" class="oneFile" [ngClass]="{'show':file.id_parent === id_parent && file.masquer === false, 'dont-show': file.id_parent != id_parent || file.masquer === true}">
+        <a [routerLink]="'/file/'+filesService.files.indexOf(file)">
+            <app-one-file [nom]="file.nom">
+            </app-one-file>
+        </a>
+    </div>
+</div>

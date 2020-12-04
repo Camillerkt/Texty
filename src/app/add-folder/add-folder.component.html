@@ -1,0 +1,12 @@
+<a [routerLink]="getPreviousUrl()">
+    <button class="return-button">
+        <i class="fas fa-undo-alt"></i> Retour
+    </button>
+</a>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label>Nom du dossier :</label>
+    <input type="text" name="nom" id="nom" autocomplete="off" ngModel>
+    <div class="button">
+        <input type="submit" value="Créer le nouveau dossier">
+    </div>
+</form>

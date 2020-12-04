@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" (click)="showChoice()" *ngIf="!clicked">
+        <i class="fas fa-plus"></i>
+    </a>
+    <a class="navbar-brand" (click)="showChoice()" *ngIf="clicked">
+        <i class="fas fa-times"></i>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher un fichier sur l'application..." aria-label="Search" data-toggle="modal" data-target="#searchModal">
+    </div>
+</nav>
+<br/><br/><br/>
+<div id="choice">
+    <a [routerLink]="'add-file/'+id_parentService.id_parent">
+        <p>Créer un fichier txt</p>
+    </a>
+    <div class="choice-separation"></div>
+    <a [routerLink]="'add-folder/'+id_parentService.id_parent">
+        <p>Créer un nouveau dossier</p>
+    </a>
+    
+</div> 
+
+
+
+<!-- Modal pour la barre de recherche -->
+<app-search-bar></app-search-bar>
+<!-- Fin du modal pour la barre de recherche -->

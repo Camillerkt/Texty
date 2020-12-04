@@ -1,0 +1,12 @@
+<a [routerLink]="getPreviousUrl()">
+  <button class="return-button">
+      <i class="fas fa-undo-alt"></i> Retour
+  </button>
+</a>
+<form (ngSubmit)="renameFolder(f)" #f="ngForm">
+  <label>Nouveau nom du dossier :</label>
+  <input type="text" name="new_name" placeholder="Nouveau nom..." autocomplete="off" [ngModel]="foldersService.folders[+id_folder].nom">
+  <div class="button">
+      <input type="submit" value="Modifier le nom du dossier">
+  </div>
+</form>

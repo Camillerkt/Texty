@@ -1,0 +1,29 @@
+<div class="header">
+    <a [routerLink]="getPreviousUrl()">
+        <button class="return-button">
+            <i class="fas fa-undo-alt"></i> Retour
+        </button>
+    </a>
+    
+    <a (click)="exportFile()">
+        <button class="export-button">
+            <i class="fas fa-file-export"></i> Exporter
+        </button>
+    </a>
+
+    <a [routerLink]="'/rename-file/'+id">
+        <button class="rename-button">
+            <i class="fas fa-i-cursor"></i> Renommer
+        </button>
+    </a>
+
+    <a (click)="deleteFile()">
+        <button class="delete-button">
+            <i class="fas fa-trash-alt"></i> Supprimer
+        </button>
+    </a>
+</div>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input type="submit" value="Enregistrer">
+    <textarea name="contenu" id="contenu" [ngModel]="filesService.files[id].contenu"></textarea>
+</form>

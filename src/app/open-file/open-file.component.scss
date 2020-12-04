@@ -1,0 +1,34 @@
+.header{
+    display:flex;
+}
+.header .return-button, .delete-button, .export-button, .rename-button{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border:none;
+    background-color: inherit;
+    outline:none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.header .delete-button{
+    color: red;
+}
+.header .rename-button{
+    color: rgb(80, 148, 119);
+}
+.header .export-button{
+    color:rgb(96, 177, 186);
+}
+form input[type=submit]{
+    border:none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    outline: none;
+}
+form textarea{
+    margin-top: 15px;
+    border:none;
+    height: 500px;
+    width: 100%;
+    outline: none;
+}

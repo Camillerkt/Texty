@@ -1,0 +1,21 @@
+.modal-header{
+    border:none;
+}
+form{
+    display: flex;
+}
+form input[type=text]{
+    margin-right: 10px;
+}
+form input[type=submit]{
+    border:none;
+    background-color: #85DAD5;
+    border-radius: 5px;
+    color: #fff;
+    outline:none;
+    font-weight: bold;
+}
+
+.modal-body a{
+    text-decoration: none;
+}
